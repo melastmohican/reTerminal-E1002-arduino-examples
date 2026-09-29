@@ -53,6 +53,10 @@ All pin definitions are pre-configured in `Display_EPD_W21_spi.h`:
   3. Clears the display to white and enters deep sleep (`EPD_sleep()`).
 * **Refresh Characteristics:** Uses full electrophoretic agitation (~15 s per frame) across the entire screen, yielding full color saturation and contrast.
 
+<p align="center">
+  <img src="images/GDEP073E01.jpg" alt="Good Display GDEP073E01 Full Refresh Demo" width="600">
+</p>
+
 ### 2. [`GDEP073E01_Partial/`](GDEP073E01_Partial/) — Specified-Area Partial Window Refresh Demo
 * **Source:** Latest official Good Display partial package (`ESP32-GDEP073E01 - 局刷.zip`).
 * **Sequence:**
@@ -60,6 +64,10 @@ All pin definitions are pre-configured in `Display_EPD_W21_spi.h`:
   2. Renders an 8×8 black-and-white chessboard pattern across the 800×480 screen.
   3. Uses ED2208 `CMD_PARTIAL_WINDOW` (`0x83`) to update individual 100×60 pixel blocks with colors (**Red**, **Yellow**, **Blue**, **Green**) without redrawing the rest of the display.
   4. Clears screen to white and powers down to deep sleep.
+
+<p align="center">
+  <img src="images/GDEP073E01_Partial.jpg" alt="Good Display GDEP073E01 Partial Refresh Chessboard Demo" width="600">
+</p>
 
 ---
 

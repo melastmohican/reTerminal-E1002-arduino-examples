@@ -48,6 +48,11 @@ Official Good Display vendor sample ported to the reTerminal E1002 carrier board
 
 See [`good_display/README.md`](good_display/README.md) for pinout mapping and ACeP partial refresh characteristics.
 
+<p align="center">
+  <img src="good_display/images/GDEP073E01.jpg" alt="Good Display Full Refresh Demo" width="380">&nbsp;&nbsp;
+  <img src="good_display/images/GDEP073E01_Partial.jpg" alt="Good Display Partial Refresh Demo" width="380">
+</p>
+
 ---
 
 ### [`Waveshare_7in3e/`](Waveshare_7in3e/) — Waveshare Vendor Driver
@@ -59,6 +64,12 @@ Official Waveshare driver and graphics framework ported to the reTerminal E1002.
 | [`Waveshare_7in3e/`](Waveshare_7in3e/) | 7.3inch e-Paper (E) | ED2208 | Official 800×480 bitmap display (`gImage_7in3e`), 6-color hardware bars, full-screen `GUI_Paint` primitives (`scale=6`), and deep sleep |
 
 See [`Waveshare_7in3e/README.md`](Waveshare_7in3e/README.md) for full details and pinouts.
+
+<p align="center">
+  <img src="Waveshare_7in3e/images/7in3e1.jpg" alt="Waveshare 7.3E Bitmap" width="255">&nbsp;
+  <img src="Waveshare_7in3e/images/7in3e2.jpg" alt="Waveshare 7.3E Stripes" width="255">&nbsp;
+  <img src="Waveshare_7in3e/images/7in3e3.jpg" alt="Waveshare 7.3E GUI_Paint" width="255">
+</p>
 
 ---
 

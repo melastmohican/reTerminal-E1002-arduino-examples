@@ -101,14 +101,28 @@ $$\text{Byte} = (\text{Pixel}_0 \ll 4) \mid \text{Pixel}_1$$
 
 ## 🚀 Sketch Execution Sequence (`Waveshare_7in3e.ino`)
 
-1. **Hardware Init:** Configures GPIOs, initialises HSPI, resets the panel (`0x00`), and sends controller initialization parameters.
-2. **White Background Clear:** Writes clean white (`0x11`) across all 192,000 bytes and triggers full electrophoretic refresh.
-3. **Landscape Image (`gImage_7in3e`):** Displays the official Waveshare 800×480 landscape sample photo stored in flash.
-4. **Color Swatches (`EPD_7IN3E_Show7Block`):** Renders vertical solid color stripes (Black, White, Yellow, Red, Blue, Green) directly using hardware register commands.
-5. **In-Memory GUI Primitives:**
+1. **Hardware Init:** Configures GPIOs, initialises HSPI at 2 MHz, resets the panel, and sends ED2208 initialization registers.
+2. **Landscape Image (`gImage_7in3e`):** Displays the official Waveshare 800×480 landscape sample photo stored in flash.
+
+<p align="center">
+  <img src="images/7in3e1.jpg" alt="Waveshare 7.3E Sample Bitmap Display" width="600">
+</p>
+
+3. **Color Stripes (`EPD_7IN3E_Show7Block`):** Renders 6 native solid color stripes (Black, Yellow, Red, Blue, Green, White) directly using hardware register commands.
+
+<p align="center">
+  <img src="images/7in3e2.jpg" alt="Waveshare 7.3E 6 Native Color Stripes" width="600">
+</p>
+
+4. **In-Memory GUI Primitives (`GUI_Paint`):**
    - Allocates 192 KB framebuffer (`Paint_NewImage`).
    - Draws geometric primitives: lines, empty rectangles, filled rectangles, and circles.
    - Renders multi-size text fonts (`Font8`, `Font12`, `Font16`, `Font20`, `Font24`).
    - Renders Chinese characters with `Font12CN` and `Font24CN`.
    - Flushes buffer to display and refreshes.
-6. **Deep Sleep:** Sends `0x02` (`POF`) followed by `0x07` (`DSLP`) to put the ED2208 into microamp hibernation mode to prevent DC bias degradation.
+
+<p align="center">
+  <img src="images/7in3e3.jpg" alt="Waveshare 7.3E GUI_Paint Primitives Demo" width="600">
+</p>
+
+5. **White Clear & Deep Sleep:** Sends `Clear(EPD_7IN3E_WHITE)` followed by `0x02` (`POF`) and `0x07` (`DSLP`) to put the ED2208 into deep sleep.
