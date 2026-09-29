@@ -37,6 +37,31 @@ See [`GxEPD2/README.md`](GxEPD2/README.md) for full details.
 
 ---
 
+### [`good_display/`](good_display/) — Good Display Vendor Driver
+
+Official Good Display vendor sample ported to the reTerminal E1002 carrier board.
+
+| Sketch | Panel | Controller | Description |
+|---|---|---|---|
+| [`GDEP073E01/`](good_display/GDEP073E01/) | GDEP073E01 | ED2208 | Official full-refresh bitmap display (`gImage_1`), 6 native solid color fields, clear, and deep sleep |
+| [`GDEP073E01_Partial/`](good_display/GDEP073E01_Partial/) | GDEP073E01 | ED2208 | Official specified area / partial window refresh demo (`CMD 0x83`), 8×8 chessboard with selective block color updates |
+
+See [`good_display/README.md`](good_display/README.md) for pinout mapping and ACeP partial refresh characteristics.
+
+---
+
+### [`Waveshare_7in3e/`](Waveshare_7in3e/) — Waveshare Vendor Driver
+
+Official Waveshare driver and graphics framework ported to the reTerminal E1002.
+
+| Sketch | Panel | Controller | Description |
+|---|---|---|---|
+| [`Waveshare_7in3e/`](Waveshare_7in3e/) | 7.3inch e-Paper (E) | ED2208 | Official 800×480 bitmap display (`gImage_7in3e`), 6-color hardware bars, full-screen `GUI_Paint` primitives (`scale=6`), and deep sleep |
+
+See [`Waveshare_7in3e/README.md`](Waveshare_7in3e/README.md) for full details and pinouts.
+
+---
+
 ### [`Peripherals/`](Peripherals/) — Onboard hardware
 
 Sketches for every onboard peripheral of the E1002 carrier board.
